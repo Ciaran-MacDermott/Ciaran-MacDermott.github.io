@@ -1,0 +1,157 @@
+:root {
+  --bg: #f4f4f4;
+  --text: #333;
+  --primary: #0b3d91;     /* dark blue */
+  --primary-200: #e7eefc; /* light tint */
+  --card-bg: #ffffff;
+  --muted: #666;
+  --ring: rgba(11, 61, 145, 0.15);
+}
+
+
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+
+body {
+  background-color: var(--bg);
+  color: var(--text);
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  line-height: 1.5;
+}
+
+
+/* A centered wrapper with fluid width */
+.container {
+  width: min(1100px, 92vw);
+  margin-inline: auto;
+  padding-inline: 1rem;
+}
+
+
+/* Header */
+.site-header {
+  text-align: center;
+  padding: 2.25rem 0 1.5rem;
+}
+
+
+.name {
+  color: var(--primary);
+  font-size: clamp(2rem, 3.3vw, 2.8rem);
+  line-height: 1.1;
+  margin: 0 0 0.25rem 0;
+}
+
+
+.tagline {
+  margin: 0.25rem 0 1rem 0;
+  color: var(--muted);
+  font-size: 1.05rem;
+}
+
+
+/* CONTACT: Flexbox using justify-content (Requirement: Use Justified Content) */
+.contact {
+  list-style: none;
+  margin: 0.5rem 0 0;
+  padding: 0;
+
+
+  display: flex;              /* FLEX */
+  flex-wrap: wrap;
+  gap: 0.75rem 1.25rem;
+  justify-content: center;    /* <-- justify-content used here */
+}
+
+
+.contact a {
+  color: var(--primary);
+  text-decoration: none;
+  padding: 0.1rem 0.15rem;
+  border-radius: 4px;
+}
+
+
+.contact a:hover,
+.contact a:focus {
+  text-decoration: underline;
+  outline: 2px solid transparent;
+}
+
+
+/* SECTION HEADERS */
+.section-title {
+  color: var(--primary);
+  font-size: 1.35rem;
+  font-weight: 700;
+  border-bottom: 2px solid var(--primary);
+  padding-bottom: 0.25rem;
+  margin-top: 0;
+  margin-bottom: 0.75rem;
+}
+
+
+/* Flexbox grid: 3 columns at desktop, 2 at tablet, 1 at mobile */
+.cv-grid {
+  display: flex;                 /* FLEX CONTAINER */
+  flex-wrap: wrap;
+  gap: 1.25rem;
+  justify-content: space-between;/* <-- justify-content used again */
+  align-items: stretch;
+  margin: 0 0 2rem 0;
+  text-align: justify;
+}
+
+
+/* Cards inside the grid */
+
+
+
+
+
+
+/* Smaller text inside the Education card only */
+.card:nth-of-type(2) .list {  /* 2nd card is Education after the photo card */
+  font-size: 0.9rem; /* or 0.85rem */
+}
+
+
+
+
+/* Full-width card that sits above the grid of three */
+.card.card--wide {
+  flex: 1 1 100%;
+  max-width: 100%;
+}
+
+
+/* Center the photo using Flexbox */
+.profile-card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1.25rem 0;
+}
+
+
+/* Photo sizing and look */
+.profile-photo {
+  width: clamp(140px, 22vw, 220px);
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: 12px;      /* use 50% for a circle */
+  border: 1px solid #e8e8e8;
+  box-shadow: 0 6px 18px rgba(11, 61, 145, 0.15);
+}
+
+
+
+
+.footer {
+  text-align: center;
+}
+
+
