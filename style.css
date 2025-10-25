@@ -2,112 +2,103 @@
   --bg: #f4f4f4;
   --text: #333;
   --primary: #0b3d91;
-  --primary-200: #e7eefc;
-  --card-bg: #ffffff;
   --muted: #666;
-  --ring: rgba(11, 61, 145, 0.15);
+  --card-bg: #ffffff;
+  --border: #ccc; /* border color for emphasis */
 }
 
-/* Base reset and body styling */
+/* Reset and basic page setup */
 html, body {
   margin: 0;
   padding: 0;
-}
-
-body {
   background-color: var(--bg);
   color: var(--text);
-  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-  line-height: 1.5;
 }
 
-/* Centered layout wrapper */
+/* Container centers content with a max width */
 .container {
   width: min(1100px, 92vw);
-  margin-inline: auto;
-  padding-inline: 1rem;
+  margin: 0 auto;
+  padding: 1rem;
 }
 
 /* Header */
 .site-header {
   text-align: center;
-  padding: 2.25rem 0 1.5rem;
+  padding: 2rem 0 1rem;
 }
 
 .name {
   color: var(--primary);
-  font-size: clamp(2rem, 3.3vw, 2.8rem);
-  line-height: 1.1;
-  margin: 0 0 0.25rem 0;
+  margin-bottom: 0.25rem;
 }
 
 .tagline {
-  margin: 0.25rem 0 1rem 0;
   color: var(--muted);
-  font-size: 1.05rem;
+  margin: 0.25rem 0 1rem 0;
 }
 
-/* Contact list */
+/* Contact list (Flexbox) */
 .contact {
   list-style: none;
   margin: 0.5rem 0 0;
   padding: 0.5rem 0;
   display: flex;
   flex-wrap: wrap;
-  gap: 0.75rem 1.25rem;
+  gap: 1rem;
   justify-content: center;
   background-color: #fafafa;
 }
 
-/* Section titles */
+/* Section headings */
 .section-title {
   color: var(--primary);
-  font-size: 1.35rem;
-  font-weight: 700;
   border-bottom: 2px solid var(--primary);
-  padding-bottom: 0.25rem;
   margin: 0 0 0.75rem 0;
+  padding-bottom: 0.25rem;
 }
 
-/* CV grid layout */
+/* Flexbox grid layout */
 .cv-grid {
   display: flex;
   flex-wrap: wrap;
-  gap: 1.25rem;
+  gap: 1rem;
   justify-content: space-between;
   align-items: stretch;
-  margin: 0 0 2rem 0;
-  text-align: justify;
+  margin-bottom: 2rem;
   background-color: #fafafa;
-  padding: 1.5rem;
-  border-radius: 12px;
+  padding: 1rem;
+  border-radius: 8px;
 }
 
-/* Cards */
+/* Card boxes inside the grid */
 .card {
   background-color: var(--card-bg);
-  padding: 1.25rem;
-  border-radius: 8px;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  padding: 1rem;
+  border: 1.5px solid var(--border);
+  border-radius: 6px;
+  flex: 1 1 30%;
+  box-sizing: border-box;
 }
 
 .card.card--wide {
   flex: 1 1 100%;
-  max-width: 100%;
 }
 
-/* Education card smaller text */
+/* Education list smaller text */
 .card:nth-of-type(2) .list {
   font-size: 0.9rem;
 }
 
-/* Profile photo section */
+/* Profile photo */
 .profile-card {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 1.25rem 0;
+  padding: 1rem 0;
   background-color: #fafafa;
+  border: 1.5px solid var(--border);
+  border-radius: 6px;
 }
 
 .profile-photo {
@@ -115,8 +106,7 @@ body {
   aspect-ratio: 1 / 1;
   object-fit: cover;
   border-radius: 50%;
-  border: 1px solid #e8e8e8;
-  box-shadow: 0 6px 18px rgba(11, 61, 145, 0.15);
+  border: 2px solid var(--border);
 }
 
 /* Footer */
@@ -126,6 +116,5 @@ body {
   padding: 1rem 0;
   margin-top: 2rem;
   color: var(--muted);
-  font-size: 0.9rem;
+  border-top: 1.5px solid var(--border);
 }
-
