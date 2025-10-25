@@ -4,8 +4,7 @@
   --primary: #0b3d91;
   --muted: #666;
   --card-bg: #ffffff;
-  --border: #b0b8c1; /* border color for emphasis */
-}
+  --border: #555;
 
 /* Reset and basic page setup */
 html, body {
