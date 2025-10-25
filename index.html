@@ -1,8 +1,114 @@
-<html>
+<!DOCTYPE html>
+<html lang = eng>
 <head>
-  <title>This is my Website</title>
+  <title>Ciaran's CV Website</title>
+  <meta name="viewport" content="width=device-width", initial-scale=1 />
+  <link rel="stylesheet" href="style.css">
 </head>
+  
 <body>
+  <!-- Header Section  -->
+  <header class = "site-header">
+    <div class = "container">
+      <h1 class="name">Ciaran MacDermott</h1>
+      <p class="tagline">Seeking Hybrid or Remote Work</p>
+      <p class="tagline">Creative problem Solver, hard worker, solution architect, team player, always learning</p>
+
+      <!--Flexbox with content justified-->
+      <ul class = "contact">
+        <li>email: c.macd@gmail.com</li>
+        <li>tel: +353871245623</li>
+        <li> <a"www.linkedin.com">LinkedIn Profile</a> </li>
+      </ul>
+    </div>
+  </header>
+  <main class="container">
+  
+    <!-- FLEXBOX GRID (three columns on large screens) -->
+    <section class="cv-grid" aria-label="CV Sections">
+
+
+      <!-- Full-width photo card above the 3 boxes -->
+      <article class="card card--wide profile-card" aria-label="Profile Photo">
+        <img
+          class="profile-photo"
+         src="me.jpg" 
+		 alt="Headshot of Ciaran MacDermott"
+        />
+      </article>
+	      <article class="card">
+        <h2 class="section-title">Experience</h2>
+        <p>
+          Currently working as Manager, Data Science at Circana across assortment optimization, forecasting and custom analytic reporting projects. Previously held
+          roles in analytics, legal, and environmental sectors. Experience with Microsoft Azure and Databricks platforms. 
+        </p> 
+		 <p>
+          Also doing a part-time college course with NCI where I am looking to broaden my knowledge of computer science.  
+        </p>
+		<p>
+          In my spare time I like making electronic music, minding my 2 dogs, hiking and watching football.  
+        </p>
+      </article>
+	  
+      <article class="card">
+        <h2 class="section-title">Education</h2>
+        <ul class="list">
+          <li>
+            MSc Science Data Analytics and Visualization
+            <ul>
+              <li>Grade: 1:1</li>
+            </ul>
+          </li>
+          <li>
+            BBL Bachelor Business and Law
+            <ul>
+              <li>Grade: 2:1</li>
+            </ul>
+          </li>
+          <li>
+            Higher Diploma Computer Studies with AI
+            <ul>
+              <li>Grade: currently on-going</li>
+            </ul>
+          </li>
+        </ul>
+      </article>
+
+
+      <article class="card">
+        <h2 class="section-title">Skills</h2>
+        <ul class="pill-list">
+          <li>Data Analysis</li>
+          <li>Machine Learning</li>
+          <li>Python &amp; R ; SQL</li>
+          <li>Problem Solving</li>
+          <li>Communication</li>
+        </ul>
+      </article>
+
+
+
+
+
+
+    </section>
+  </main>
+
+
+  <footer class="footer">
+    <small>© <span id="year"></span> Ciaran MacDermott</small>
+  </footer>
+
+
+  <script>
+    <!--little enhancement: updates footer year automatically -->
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+  
+</body>
+</html>
+
+  
   <h1>Yo wa gwarn</h1>
 
   
