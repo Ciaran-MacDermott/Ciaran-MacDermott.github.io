@@ -95,8 +95,8 @@ body {
   align-items: stretch;
   margin: 0 0 2rem 0;
   text-align: justify;
-  background-color: #fafafa;   /* subtle grey  
-}
+  background-color: #fafafa;   /* subtle grey   */
+  }
 
 
 /* Cards inside the grid */
@@ -128,7 +128,7 @@ body {
   width: clamp(140px, 22vw, 220px);
   aspect-ratio: 1 / 1;
   object-fit: cover;
-  border-radius: 12px;      /* use 50% for a circle */
+  border-radius: 11px;      /* use 50% for a circle */
   border: 1px solid #e8e8e8;
   box-shadow: 0 6px 18px rgba(11, 61, 145, 0.15);
 }
