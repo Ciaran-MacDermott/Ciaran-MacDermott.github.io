@@ -127,3 +127,18 @@ html, body {
   color: var(--muted);
   border-top: 1.5px solid var(--border);
 }
+
+@media (max-width: 600px) {
+  .card {
+    flex: 1 1 100%;
+  }
+
+  .contact {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .section-title {
+    text-align: center;
+  }
+}
