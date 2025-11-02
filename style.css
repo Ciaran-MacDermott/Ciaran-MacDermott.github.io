@@ -3,149 +3,44 @@
   --text: #222;
   --primary: #0b3d91;
   --muted: #555;
-  --card-bg: #ffffff;
-  --border: #bbb; /* soft grey borders */
+  --border: #bbb;
 }
 
-/* --- Basic Page Setup --- */
-html, body {
-  margin: 0;
-  padding: 0;
+/* Global look */
+body {
   background-color: var(--bg);
   color: var(--text);
+  font-family: system-ui, sans-serif;
 }
 
-/* --- Container (centers content) --- */
-.container {
-  width: min(1100px, 92vw);
-  margin: 0 auto;
-  padding: 1rem;
-  box-sizing: border-box;
-}
-
-/* --- Header --- */
-.site-header {
-  text-align: center;
-  padding: 2rem 0 1rem;
-}
-
+/* Header text */
 .name {
   color: var(--primary);
-  margin-bottom: 0.25rem;
 }
 
 .tagline {
   color: var(--muted);
-  margin: 0.25rem 0 1rem 0;
 }
 
-/* --- Contact Section (Flexbox) --- */
-.contact {
-  list-style: none;
-  margin: 0.5rem auto 1.5rem;
-  padding: 0.75rem 0.5rem;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1rem 2rem;
-  justify-content: center;
-  background-color: #fafafa;
-  border: 1.5px solid var(--border);
-  border-radius: 8px;
-  text-align: center;
-}
-
-/* --- Section Titles --- */
+/* Section titles */
 .section-title {
   color: var(--primary);
   border-bottom: 2px solid var(--primary);
-  margin: 0 0 0.75rem 0;
+  margin-bottom: 0.75rem;
   padding-bottom: 0.25rem;
-  text-align: left;
+  font-size: 1.25rem;
 }
 
-/* --- Flexbox CV Grid --- */
-.cv-grid {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1.25rem;
-  justify-content: center;        /* centers items evenly */
-  align-items: stretch;
-  margin-bottom: 2rem;
-  background-color: #fafafa;
-  padding: 1.5rem;
-  border-radius: 10px;
-  border: 1.5px solid var(--border);
-  box-sizing: border-box;
-}
-
-/* --- Individual Cards --- */
-.card {
-  background-color: var(--card-bg);
-  padding: 1.25rem;
-  border: 1.5px solid var(--border);
-  border-radius: 8px;
-  flex: 1 1 300px;                /* ensures nice alignment across devices */
-  max-width: 32%;
-  box-sizing: border-box;
-}
-
-.card.card--wide {
-  flex: 1 1 100%;
-  max-width: 100%;
-}
-
-/* --- Education Card Smaller Text --- */
-.card:nth-of-type(2) .list {
-  font-size: 0.9rem;
-}
-
-/* --- Profile Photo Section --- */
-.profile-card {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 1rem 0;
-  background-color: #fafafa;
-  border: 1.5px solid var(--border);
-  border-radius: 8px;
-}
-
+/* Profile photo */
 .profile-photo {
   width: clamp(140px, 22vw, 220px);
   aspect-ratio: 1 / 1;
   object-fit: cover;
   border-radius: 50%;
-  border: 1.5px solid var(--border);
+  border: 2px solid var(--border);
 }
 
-/* --- Footer --- */
+/* Footer */
 .footer {
-  text-align: center;
-  background-color: #fafafa;
-  padding: 1rem 0;
-  margin-top: 2rem;
   color: var(--muted);
-  border-top: 1.5px solid var(--border);
-}
-
-/* Mobile (1 card per row) */
-@media (max-width: 600px) {
-  .cv-grid {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .card {
-    flex: 1 1 100%;
-    max-width: 100%;
-  }
-
-  .contact {
-    flex-direction: column;
-    gap: 0.5rem;
-  }
-
-  .section-title {
-    text-align: center;
-  }
 }
